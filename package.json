@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "fixture-stdout": "0.2.0",
-    "mocha": "~1.17.1"
+    "mocha": "~1.17.1",
+    "verror": "^1.6.0"
   }
 }
