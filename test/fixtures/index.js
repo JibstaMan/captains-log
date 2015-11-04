@@ -40,16 +40,6 @@ module.exports = {
 			};
 		},
 
-		info: function () {
-			var args = Array.prototype.slice.call(arguments);
-			return function () {
-				var ctx = this;
-				_recordAll(ctx);
-				ctx.log.info.apply(args);
-				_pauseAll(ctx);
-			};
-		},
-
 		blank: function () {
 			var args = Array.prototype.slice.call(arguments);
 			return function () {
@@ -79,6 +69,16 @@ module.exports = {
 				_pauseAll(ctx);
 			};
 		},
+
+    info: function () {
+      var args = Array.prototype.slice.call(arguments);
+      return function () {
+        var ctx = this;
+        _recordAll(ctx);
+        ctx.log.info.apply(args);
+        _pauseAll(ctx);
+      };
+    },
 
 		warn: function () {
 			var args = Array.prototype.slice.call(arguments);

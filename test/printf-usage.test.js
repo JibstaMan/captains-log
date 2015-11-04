@@ -10,6 +10,7 @@ describe('printf-usage', function() {
 
   before(function newLog() {
     this.log = new CaptainsLog({
+      level: 'debug',
       prefix: '',
       prefixes: null
     });
